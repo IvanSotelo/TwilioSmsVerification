@@ -1,5 +1,5 @@
 {
-    "name": "ivansotelo/twilio-sms-verification",
+    "name": "ivansotelo/twilio-verify",
     "description": "Verify Phone Numbers in a Laravel PHP Application with Twilio Verify",
     "keywords": [
         "laravel",
@@ -16,7 +16,8 @@
     "require": {
         "php": ">=7.2",
         "illuminate/support": "^5.7|^6.0",
-        "illuminate/config": "^5.7|^6.0"
+        "illuminate/config": "^5.7|^6.0",
+        "twilio/sdk": "dev-master"
     },
     "require-dev": {
         "mockery/mockery": "^1.0",
@@ -25,18 +26,18 @@
     },
     "autoload": {
         "psr-4": {
-            "IvanSotelo\\TwilioSmsVerification\\": "src"
+            "IvanSotelo\\TwilioVerify\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "IvanSotelo\\TwilioSmsVerification\\Tests\\": "tests"
+            "IvanSotelo\\TwilioVerify\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "IvanSotelo\\TwilioSmsVerification\\TwilioSmsVerificationServiceProvider"
+                "IvanSotelo\\TwilioVerify\\TwilioVerifyServiceProvider"
             ]
         }
     },
