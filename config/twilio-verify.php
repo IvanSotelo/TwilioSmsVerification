@@ -7,13 +7,13 @@ return [
     | Twilio Keys
     |--------------------------------------------------------------------------
     |
-    | The Twilio publishable sid, token and verify sid key give you access to
+    | The Twilio publishable account_sid, token and verify sid key give you access to
     | Twilio's API. The "publishable" key is typically used when interacting
     | with Twilio.js while the "token" key accesses private API endpoints.
     |
     */
 
-    'sid' => env('TWILIO_SID'),
+    'account_sid' => env('TWILIO_SID'),
 
     'token' => env('TWILIO_AUTH_TOKEN'),
 
@@ -31,6 +31,17 @@ return [
     */
 
     'model' => env('TWILIO_VERIFY_MODEL', App\User::class),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Twilio Verify phone number
+    |--------------------------------------------------------------------------
+    |
+    | This is the Twilio phone number you purchased at twilio.com/console.
+    |
+    */
+
+    'phone_number' => env('TWILIO_NUMBER'),
 
     /*
     |--------------------------------------------------------------------------
