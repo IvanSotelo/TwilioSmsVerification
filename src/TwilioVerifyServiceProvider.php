@@ -2,6 +2,8 @@
 
 namespace IvanSotelo\TwilioVerify;
 
+use Twilio\Rest\Client;
+use IvanSotelo\TwilioVerify\TwilioVerify;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -30,6 +32,7 @@ class TwilioVerifyServiceProvider extends ServiceProvider
     {
         $this->configure();
         $this->bindLogger();
+        $this->bindTwilio();
     }
 
     /**
@@ -56,6 +59,36 @@ class TwilioVerifyServiceProvider extends ServiceProvider
                 $app->make('log')->channel(config('twilio-verify.logger'))
             );
         });
+    }
+
+    /**
+     * Bind the Twilio Client to the TwilioVerify class.
+     *
+     * @return void
+     */
+    protected function bindTwilio()
+    {
+        $this->app->bind('TwilioVerify', function ($app) {
+            $this->ensureConfigValuesAreSet();
+            $client = new Client(config('twilio-verify.account_sid'), config('twilio-verify.token'));
+            return new TwilioVerify($client);
+        });
+    }
+
+    /**
+     * Ensure that all the keys we defined in the config file.
+     *
+     * @return void
+     */
+    protected function ensureConfigValuesAreSet()
+    {
+        $mandatoryAttributes = config('twilio-verify');
+
+        foreach ($mandatoryAttributes as $key => $value) {
+            if (empty($value)) {
+                throw new Exception("Please provide a value for ${key}");
+            }
+        }
     }
 
     /**
