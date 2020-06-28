@@ -5,7 +5,7 @@ namespace IvanSotelo\TwilioVerify\Listeners;
 use Illuminate\Auth\Events\Registered;
 use IvanSotelo\TwilioVerify\Contracts\MustVerifyPhone;
 
-class SendEmailVerificationNotification
+class SendPhoneVerificationNotification
 {
     /**
      * Handle the event.
