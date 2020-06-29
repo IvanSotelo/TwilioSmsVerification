@@ -16,9 +16,8 @@ class TwilioVerifyServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->registerLogger();
-        // $this->registerRoutes();
-        // $this->registerResources();
+        $this->registerRoutes();
+        $this->registerResources();
         $this->registerMigrations();
         $this->registerPublishing();
     }
@@ -31,8 +30,6 @@ class TwilioVerifyServiceProvider extends ServiceProvider
     public function register()
     {
         $this->configure();
-        $this->bindLogger();
-        $this->bindTwilio();
     }
 
     /**
@@ -45,62 +42,6 @@ class TwilioVerifyServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../config/twilio-verify.php', 'twilio-verify'
         );
-    }
-
-    /**
-     * Bind the Openpay logger interface to the TwilioVerify logger.
-     *
-     * @return void
-     */
-    protected function bindLogger()
-    {
-        $this->app->bind(LoggerInterface::class, function ($app) {
-            return new Logger(
-                $app->make('log')->channel(config('twilio-verify.logger'))
-            );
-        });
-    }
-
-    /**
-     * Bind the Twilio Client to the TwilioVerify class.
-     *
-     * @return void
-     */
-    protected function bindTwilio()
-    {
-        $this->app->bind('TwilioVerify', function ($app) {
-            $this->ensureConfigValuesAreSet();
-            $client = new Client(config('twilio-verify.account_sid'), config('twilio-verify.token'));
-            return new TwilioVerify($client);
-        });
-    }
-
-    /**
-     * Ensure that all the keys we defined in the config file.
-     *
-     * @return void
-     */
-    protected function ensureConfigValuesAreSet()
-    {
-        $mandatoryAttributes = config('twilio-verify');
-
-        foreach ($mandatoryAttributes as $key => $value) {
-            if (empty($value)) {
-                throw new Exception("Please provide a value for ${key}");
-            }
-        }
-    }
-
-    /**
-     * Register the Openpay logger.
-     *
-     * @return void
-     */
-    protected function registerLogger()
-    {
-        if (config('twilio-verify.logger')) {
-            //Stripe::setLogger($this->app->make(LoggerInterface::class));
-        }
     }
 
     /**
@@ -129,7 +70,6 @@ class TwilioVerifyServiceProvider extends ServiceProvider
     protected function registerResources()
     {
         $this->loadJsonTranslationsFrom(__DIR__.'/../resources/lang');
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'twilio-verify');
     }
 
     /**
@@ -159,10 +99,6 @@ class TwilioVerifyServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../database/migrations' => $this->app->databasePath('migrations'),
             ], 'twilio-verify-migrations');
-
-            // $this->publishes([
-            //     __DIR__.'/../resources/views' => $this->app->resourcePath('views/vendor/twilio-verify'),
-            // ], 'twilio-verify-views');
         }
     }
 }
