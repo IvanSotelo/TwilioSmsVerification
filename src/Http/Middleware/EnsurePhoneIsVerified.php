@@ -1,6 +1,6 @@
 <?php
 
-namespace IvanSotelo\TwilioVerify\Middleware;
+namespace IvanSotelo\TwilioVerify\Http\Middleware;
 
 use Closure;
 
