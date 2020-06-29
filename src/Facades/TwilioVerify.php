@@ -8,6 +8,6 @@ class TwilioVerify extends Facade
 {
     public static function getFacadeAccessor()
     {
-        return 'twilioverify';
+        return 'TwilioVerify';
     }
 }
