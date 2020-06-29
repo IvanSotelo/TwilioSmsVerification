@@ -2,23 +2,50 @@
 
 namespace IvanSotelo\TwilioVerify;
 
-use Twilio\Rest\Client;
-
 class TwilioVerify
 {
-    /** @var Twilio\Rest\Client */
-    protected $client;
+    /**
+     * The TwilioVerify library version.
+     *
+     * @var string
+     */
+    const VERSION = '1.0.0';
 
-    public function __construct(Client $client)
+    /**
+     * Indicates if TwilioVerify migrations will be run.
+     *
+     * @var bool
+     */
+    public static $runsMigrations = true;
+
+    /**
+     * Indicates if TwilioVerify routes will be registered.
+     *
+     * @var bool
+     */
+    public static $registersRoutes = true;
+
+    /**
+     * Configure TwilioVerify to not register its migrations.
+     *
+     * @return static
+     */
+    public static function ignoreMigrations()
     {
-        $this->client = $client;
+        static::$runsMigrations = false;
+
+        return new static;
     }
 
-    public function notify(string $number, string $message)
+    /**
+     * Configure TwilioVerify to not register its routes.
+     *
+     * @return static
+     */
+    public static function ignoreRoutes()
     {
-        return $this->client->messages->create($number, [
-            'from' => config('twilio-verify.phone_number'),
-            'body' => $message
-        ]);
+        static::$registersRoutes = false;
+
+        return new static;
     }
 }
