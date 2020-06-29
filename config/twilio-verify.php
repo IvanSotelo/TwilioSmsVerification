@@ -4,23 +4,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Twilio Keys
-    |--------------------------------------------------------------------------
-    |
-    | The Twilio publishable account_sid, token and verify sid key give you access to
-    | Twilio's API. The "publishable" key is typically used when interacting
-    | with Twilio.js while the "token" key accesses private API endpoints.
-    |
-    */
-
-    'account_sid' => env('TWILIO_SID'),
-
-    'token' => env('TWILIO_AUTH_TOKEN'),
-
-    'verify_sid' => env('TWILIO_VERIFY_SID'),
-
-    /*
-    |--------------------------------------------------------------------------
     | Twilio Verify Model
     |--------------------------------------------------------------------------
     |
@@ -34,14 +17,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Twilio Verify phone number
+    | Twilio Verify Path
     |--------------------------------------------------------------------------
     |
-    | This is the Twilio phone number you purchased at twilio.com/console.
+    | This is the base URI path where Twilio Verifys's controllers, such as the
+    | resend route, will be available from. You're free to tweak
+    | this path according to your preferences and application design.
     |
     */
 
-    'phone_number' => env('TWILIO_NUMBER'),
+    'path' => env('TWILIO_VERIFY_PATH', 'twilio'),
 
     /*
     |--------------------------------------------------------------------------
