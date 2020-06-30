@@ -1,23 +1,7 @@
 {
     "This is your verification code. :code.": "Este es tu código de verificación. :code.",
     "The code your provided is wrong. Please try again or request another code.": "El código que proporcionó es incorrecto. Por favor intente nuevamente o solicite otro código.",
-
-
-    "All rights reserved.": "Todos los derechos reservados.",
-    "Card": "Tarjeta",
-    "Confirm Payment": "Pago confirmado",
-    "Confirm your :amount payment": "Confirme su pago :amount",
-    "Extra confirmation is needed to process your payment. Please confirm your payment by filling out your payment details below.": "Se necesita confirmación adicional para procesar su pago. Confirme su pago completando los detalles de pago a continuación.",
-    "Extra confirmation is needed to process your payment. Please continue to the payment page by clicking on the button below.": "Se necesita confirmación adicional para procesar su pago. Continúe a la página de pago haciendo clic en el botón a continuación.",
-    "Full name": "Nombre completo",
-    "Go back": "Regresa",
-    "Jane Doe": "Jane Doe",
-    "Pay :amount": "Pagar :amount",
-    "Payment Cancelled": "Pago cancelado",
-    "Payment Confirmation": "Confirmación de pago",
-    "Payment Successful": "Pago exitoso",
-    "Please provide your name.": "Por favor proporcione su nombre.",
-    "The payment was successful.": "El pago fue exitoso.",
-    "This payment was already successfully confirmed.": "Este pago ya se confirmó con éxito.",
-    "This payment was cancelled.": "Este pago fue cancelado."
+    "Your phone has not been verified yet": "Su teléfono no ha sido verificado aún",
+    "Your phone was successfully verified!": "Su teléfono fue verificado con éxito!",
+    "Your code has been resent successfully.": "Su código ha sido reenviado exitosamente."
 }
