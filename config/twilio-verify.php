@@ -28,17 +28,4 @@ return [
 
     'path' => env('TWILIO_VERIFY_PATH', 'twilio'),
 
-    /*
-    |--------------------------------------------------------------------------
-    | Twilio Logger
-    |--------------------------------------------------------------------------
-    |
-    | This setting defines which logging channel will be used by the Twilio
-    | library to write log messages. You are free to specify any of your
-    | logging channels listed inside the "logging" configuration file.
-    |
-    */
-
-    'logger' => env('TWILIO_VERIFY_LOGGER'),
-
 ];
