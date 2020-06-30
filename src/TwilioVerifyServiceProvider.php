@@ -94,11 +94,15 @@ class TwilioVerifyServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/twilio-verify.php' => $this->app->configPath('twilio-verify.php'),
-            ], 'twilio-verify-config');
+            ], 'config');
 
             $this->publishes([
                 __DIR__.'/../database/migrations' => $this->app->databasePath('migrations'),
-            ], 'twilio-verify-migrations');
+            ], 'migrations');
+
+            $this->publishes([
+                __DIR__ . '/../resources/lang' => resource_path('lang/vendor/twilio-verify'),
+            ], 'translations');
         }
     }
 }
