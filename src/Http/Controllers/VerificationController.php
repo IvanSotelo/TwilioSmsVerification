@@ -51,7 +51,7 @@ class VerificationController extends Controller
             event(new Verified($request->user()));
         }
 
-        return redirect($this->redirectPath())->with('status', 'Your phone was successfully verified!');
+        return redirect($this->redirectPath())->with('status', __('Your phone was successfully verified!'));
     }
 
     /**
@@ -68,6 +68,6 @@ class VerificationController extends Controller
 
         $request->user()->sendPhoneVerificationNotification();
 
-        return response()->json(['status'=>'ok','message' => __('register.resend_succesfully')],200);
+        return response()->json(['status'=>'ok','message' => __('Your code has been resent successfully.')],200);
     }
 }

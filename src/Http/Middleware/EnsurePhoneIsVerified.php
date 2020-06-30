@@ -24,10 +24,10 @@ class EnsurePhoneIsVerified
             return response()->json([
                 'errors' => [
                     'message' => [
-                        __('errors.phone_not_verified'),
+                        __('Your phone has not been verified yet.'),
                     ],
                 ],
-                'message' => __('errors.phone_not_verified'),
+                'message' => __('Your phone has not been verified yet.'),
             ], 403);
       }
 
