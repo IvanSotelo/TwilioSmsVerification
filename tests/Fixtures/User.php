@@ -4,7 +4,7 @@ namespace IvanSotelo\TwilioVerify\Tests\Fixtures;
 
 use Illuminate\Foundation\Auth\User as Model;
 use Illuminate\Notifications\Notifiable;
-use IvanSotelo\TwilioVerify\Concerns\MustVerifyPhone;
+use IvanSotelo\TwilioVerify\Traits\MustVerifyPhone;
 use IvanSotelo\TwilioVerify\Contracts\MustVerifyPhoneContract;
 
 class User extends Model implements MustVerifyPhoneContract

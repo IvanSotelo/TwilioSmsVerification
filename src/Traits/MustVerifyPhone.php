@@ -1,6 +1,6 @@
 <?php
 
-namespace IvanSotelo\TwilioVerify\Concerns;
+namespace IvanSotelo\TwilioVerify\Traits;
 
 use IvanSotelo\TwilioVerify\Notifications\VerifyPhone;
 
