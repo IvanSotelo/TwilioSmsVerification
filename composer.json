@@ -15,8 +15,8 @@
     },
     "require": {
         "php": ">=7.2",
-        "illuminate/support": "^5.7|^6.0",
-        "illuminate/config": "^5.7|^6.0"
+        "illuminate/support": "^5.7|^6.0|^7.0",
+        "illuminate/config": "^5.7|^6.0|^7.0"
     },
     "require-dev": {
         "laravel-notification-channels/twilio": "dev-master",
