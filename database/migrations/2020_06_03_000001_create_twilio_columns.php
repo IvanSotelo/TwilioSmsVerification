@@ -42,7 +42,8 @@ class CreateTwilioColumns extends Migration
         Schema::table($this->getUserTableName(), function (Blueprint $table) {
             $table->dropColumn([
                 'phone_number',
-                'isVerified',
+                'verification_code',
+                'phone_verified_at',
             ]);
         });
     }
