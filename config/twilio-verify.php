@@ -28,4 +28,9 @@ return [
 
     'path' => env('TWILIO_VERIFY_PATH', 'twilio'),
 
+    'random_int' => [
+        'initial_value' => 100000,
+        'final_value' => 999999,
+    ],
+
 ];

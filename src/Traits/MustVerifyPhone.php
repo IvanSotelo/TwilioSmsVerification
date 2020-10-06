@@ -74,7 +74,7 @@ trait MustVerifyPhone
      */
     public function createVerificationCode()
     {
-        return $code = random_int(100000, 999999);
+        return $code = random_int(config('twilio-verify.random_int.initial_value'), config('twilio-verify.random_int.final_value'));
     }
 
     /**
