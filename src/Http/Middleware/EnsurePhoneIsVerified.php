@@ -4,7 +4,7 @@ namespace IvanSotelo\TwilioVerify\Http\Middleware;
 
 use Closure;
 
-use IvanSotelo\TwilioVerify\Contracts\MustVerifyPhone;
+use IvanSotelo\TwilioVerify\Contracts\MustVerifyPhoneContract;
 
 class EnsurePhoneIsVerified
 {
@@ -19,7 +19,7 @@ class EnsurePhoneIsVerified
   public function handle($request, Closure $next, $redirectToRoute = null)
   {
       if (! $request->user() ||
-          ($request->user() instanceof MustVerifyPhone &&
+          ($request->user() instanceof MustVerifyPhoneContract &&
           ! $request->user()->hasVerifiedPhone())) {
             return response()->json([
                 'errors' => [

@@ -2,7 +2,7 @@
 
 namespace IvanSotelo\TwilioVerify\Contracts;
 
-interface MustVerifyPhone
+interface MustVerifyPhoneContract
 {
     /**
      * Determine if the user has verified their phone.
