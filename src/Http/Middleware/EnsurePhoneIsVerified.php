@@ -4,7 +4,7 @@ namespace IvanSotelo\TwilioVerify\Http\Middleware;
 
 use Closure;
 
-use IvanSotelo\TwilioVerify\Traits\MustVerifyPhone;
+use IvanSotelo\TwilioVerify\Contracts\MustVerifyPhone;
 
 class EnsurePhoneIsVerified
 {

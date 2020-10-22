@@ -81,9 +81,9 @@ Add the MustVerifyPhone trait to your model definition. This trait provides vari
 
 ``` php
 use IvanSotelo\TwilioVerify\Traits\MustVerifyPhone;
-use IvanSotelo\TwilioVerify\Contracts\MustVerifyPhoneContract;
+use IvanSotelo\TwilioVerify\Contracts\MustVerifyPhone;
 
-class User extends Authenticatable implements MustVerifyPhoneContract
+class User extends Authenticatable implements MustVerifyPhone
 {
     use MustVerifyPhone, Notifiable;
 
