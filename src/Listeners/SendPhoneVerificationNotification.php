@@ -3,7 +3,7 @@
 namespace IvanSotelo\TwilioVerify\Listeners;
 
 use Illuminate\Auth\Events\Registered;
-use IvanSotelo\TwilioVerify\Contracts\MustVerifyPhone;
+use IvanSotelo\TwilioVerify\Contracts\MustVerifyPhoneContract;
 
 class SendPhoneVerificationNotification
 {
@@ -15,7 +15,7 @@ class SendPhoneVerificationNotification
      */
     public function handle(Registered $event)
     {
-        if ($event->user instanceof MustVerifyPhone && ! $event->user->hasVerifiedPhone()) {
+        if ($event->user instanceof MustVerifyPhoneContract && ! $event->user->hasVerifiedPhone()) {
             $event->user->sendPhoneVerificationNotification();
         }
     }
