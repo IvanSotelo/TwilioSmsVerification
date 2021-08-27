@@ -36,6 +36,7 @@ class UserTest extends FeatureTestCase
         $this->actingAs($user);
         $code = $user->generateVerificationCode();
         $response = $this->getJson('twilio/phone/verify/'.$code);
+        $response->assertStatus(302);
     }
 
 
