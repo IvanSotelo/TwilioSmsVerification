@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d822ae0896aec90a9b71b824ef58d21",
+    "content-hash": "a511a773ff45a4e32aa1713cdff32516",
     "packages": [
         {
             "name": "brick/math",
@@ -670,16 +670,16 @@
         },
         {
             "name": "laravel/ui",
-            "version": "dev-master",
+            "version": "3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/ui.git",
-                "reference": "41fac9e0f20c828a00a1a4d705a11d755d7c00b2"
+                "reference": "577188a34f7dff772d5f25bc30c0d49711c020fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/ui/zipball/41fac9e0f20c828a00a1a4d705a11d755d7c00b2",
-                "reference": "41fac9e0f20c828a00a1a4d705a11d755d7c00b2",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/577188a34f7dff772d5f25bc30c0d49711c020fd",
+                "reference": "577188a34f7dff772d5f25bc30c0d49711c020fd",
                 "shasum": ""
             },
             "require": {
@@ -689,10 +689,11 @@
                 "illuminate/validation": "^8.42",
                 "php": "^7.3|^8.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.x-dev"
+                    "dev-master": "3.x-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -722,9 +723,9 @@
                 "ui"
             ],
             "support": {
-                "source": "https://github.com/laravel/ui/tree/master"
+                "source": "https://github.com/laravel/ui/tree/3.x"
             },
-            "time": "2021-05-25T16:46:01+00:00"
+            "time": "2021-06-04T15:36:09+00:00"
         },
         {
             "name": "league/commonmark",
@@ -7824,8 +7825,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "illuminate/console": 20,
-        "laravel/ui": 20,
         "laravel-notification-channels/twilio": 20
     },
     "prefer-stable": false,
