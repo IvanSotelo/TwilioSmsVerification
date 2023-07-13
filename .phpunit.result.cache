@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"IvanSotelo\\TwilioVerify\\Tests\\Feature\\UserTest::test_must_verify_phone_trait":3.119,"IvanSotelo\\TwilioVerify\\Tests\\Feature\\UserTest::test_send_notification":2.225,"IvanSotelo\\TwilioVerify\\Tests\\Feature\\UserTest::test_verify_phone":2.271}}
+{"version":1,"defects":[],"times":{"IvanSotelo\\TwilioVerify\\Tests\\Feature\\UserTest::test_must_verify_phone_trait":3.214,"IvanSotelo\\TwilioVerify\\Tests\\Feature\\UserTest::test_send_notification":2.218,"IvanSotelo\\TwilioVerify\\Tests\\Feature\\UserTest::test_verify_phone":2.232}}
