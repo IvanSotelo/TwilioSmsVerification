@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "523e106d8c6db44c55e5d7126cc309b6",
+    "content-hash": "63cfb79a506fb44bc70701839b824ad7",
     "packages": [
         {
             "name": "brick/math",
@@ -1062,6 +1062,79 @@
                 }
             ],
             "time": "2024-03-31T10:06:05+00:00"
+        },
+        {
+            "name": "laravel-notification-channels/twilio",
+            "version": "3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-notification-channels/twilio.git",
+                "reference": "761d57bfccf7c2eccb0ca9fe0e7a66173e0e203f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-notification-channels/twilio/zipball/761d57bfccf7c2eccb0ca9fe0e7a66173e0e203f",
+                "reference": "761d57bfccf7c2eccb0ca9fe0e7a66173e0e203f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/events": "^7.0 || ^8.0 || ^9.0 || ^10.0|^11.0",
+                "illuminate/notifications": "^7.0 || ^8.0 || ^9.0 || ^10.0|^11.0",
+                "illuminate/queue": "^7.0 || ^8.0 || ^9.0 || ^10.0|^11.0",
+                "illuminate/support": "^7.0 || ^8.0 || ^9.0 || ^10.0|^11.0",
+                "php": ">=7.2|^8.0",
+                "twilio/sdk": "~6.0|^7.16"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3",
+                "orchestra/testbench": "^5.0 || ^6.0 || ^7.0 || ^8.0|^9.0",
+                "phpunit/phpunit": "^8.5|^9.5|^10.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NotificationChannels\\Twilio\\TwilioProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NotificationChannels\\Twilio\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gregorio Hernández Caso",
+                    "email": "gregoriohc@gmail.com",
+                    "homepage": "https://github.com/gregoriohc",
+                    "role": "Developer"
+                },
+                {
+                    "name": "atymic",
+                    "email": "atymicq@gmail.com",
+                    "homepage": "https://atymic.dev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Provides Twilio notification channel for Laravel",
+            "keywords": [
+                "call",
+                "laravel",
+                "mms",
+                "notification",
+                "sms",
+                "twilio"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-notification-channels/twilio/issues",
+                "source": "https://github.com/laravel-notification-channels/twilio"
+            },
+            "time": "2024-03-14T21:53:03+00:00"
         },
         {
             "name": "laravel/framework",
@@ -5371,6 +5444,59 @@
             "time": "2023-12-08T13:03:43+00:00"
         },
         {
+            "name": "twilio/sdk",
+            "version": "7.16.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twilio/twilio-php.git",
+                "reference": "02ad214b0cc9fc513bd67df251d54aed8901284f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/02ad214b0cc9fc513bd67df251d54aed8901284f",
+                "reference": "02ad214b0cc9fc513bd67df251d54aed8901284f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^6.3 || ^7.0",
+                "phpunit/phpunit": ">=7.0 < 10"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "An HTTP client to execute the API requests"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Twilio\\": "src/Twilio/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Twilio API Team",
+                    "email": "api@twilio.com"
+                }
+            ],
+            "description": "A PHP wrapper for Twilio's API",
+            "homepage": "https://github.com/twilio/twilio-php",
+            "keywords": [
+                "api",
+                "sms",
+                "twilio"
+            ],
+            "support": {
+                "issues": "https://github.com/twilio/twilio-php/issues",
+                "source": "https://github.com/twilio/twilio-php/tree/7.16.2"
+            },
+            "time": "2024-04-01T10:34:42+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "dev-master",
             "source": {
@@ -5856,80 +5982,6 @@
                 "source": "https://github.com/hamcrest/hamcrest-php/tree/master"
             },
             "time": "2023-12-14T11:00:58+00:00"
-        },
-        {
-            "name": "laravel-notification-channels/twilio",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel-notification-channels/twilio.git",
-                "reference": "761d57bfccf7c2eccb0ca9fe0e7a66173e0e203f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel-notification-channels/twilio/zipball/761d57bfccf7c2eccb0ca9fe0e7a66173e0e203f",
-                "reference": "761d57bfccf7c2eccb0ca9fe0e7a66173e0e203f",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/events": "^7.0 || ^8.0 || ^9.0 || ^10.0|^11.0",
-                "illuminate/notifications": "^7.0 || ^8.0 || ^9.0 || ^10.0|^11.0",
-                "illuminate/queue": "^7.0 || ^8.0 || ^9.0 || ^10.0|^11.0",
-                "illuminate/support": "^7.0 || ^8.0 || ^9.0 || ^10.0|^11.0",
-                "php": ">=7.2|^8.0",
-                "twilio/sdk": "~6.0|^7.16"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.3",
-                "orchestra/testbench": "^5.0 || ^6.0 || ^7.0 || ^8.0|^9.0",
-                "phpunit/phpunit": "^8.5|^9.5|^10.5"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "NotificationChannels\\Twilio\\TwilioProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "NotificationChannels\\Twilio\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gregorio Hernández Caso",
-                    "email": "gregoriohc@gmail.com",
-                    "homepage": "https://github.com/gregoriohc",
-                    "role": "Developer"
-                },
-                {
-                    "name": "atymic",
-                    "email": "atymicq@gmail.com",
-                    "homepage": "https://atymic.dev",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Provides Twilio notification channel for Laravel",
-            "keywords": [
-                "call",
-                "laravel",
-                "mms",
-                "notification",
-                "sms",
-                "twilio"
-            ],
-            "support": {
-                "issues": "https://github.com/laravel-notification-channels/twilio/issues",
-                "source": "https://github.com/laravel-notification-channels/twilio"
-            },
-            "time": "2024-03-14T21:53:03+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -8925,59 +8977,6 @@
             "time": "2024-03-03T12:36:25+00:00"
         },
         {
-            "name": "twilio/sdk",
-            "version": "7.16.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/twilio/twilio-php.git",
-                "reference": "02ad214b0cc9fc513bd67df251d54aed8901284f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/02ad214b0cc9fc513bd67df251d54aed8901284f",
-                "reference": "02ad214b0cc9fc513bd67df251d54aed8901284f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1.0"
-            },
-            "require-dev": {
-                "guzzlehttp/guzzle": "^6.3 || ^7.0",
-                "phpunit/phpunit": ">=7.0 < 10"
-            },
-            "suggest": {
-                "guzzlehttp/guzzle": "An HTTP client to execute the API requests"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Twilio\\": "src/Twilio/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Twilio API Team",
-                    "email": "api@twilio.com"
-                }
-            ],
-            "description": "A PHP wrapper for Twilio's API",
-            "homepage": "https://github.com/twilio/twilio-php",
-            "keywords": [
-                "api",
-                "sms",
-                "twilio"
-            ],
-            "support": {
-                "issues": "https://github.com/twilio/twilio-php/issues",
-                "source": "https://github.com/twilio/twilio-php/tree/7.16.2"
-            },
-            "time": "2024-04-01T10:34:42+00:00"
-        },
-        {
             "name": "zbateson/mail-mime-parser",
             "version": "2.4.1",
             "source": {
@@ -9187,9 +9186,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "laravel-notification-channels/twilio": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
